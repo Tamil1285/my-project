@@ -1,0 +1,141 @@
+/* Increase card size */
+.card {
+  height: 100%; /* Ensure all cards have equal height */
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Increase image size */
+.card img {
+  height: 200px; /* Adjust image height */
+  object-fit: contain; /* Ensure the image fits properly */
+  padding: 10px;
+}
+
+/* Ensure text inside the card has enough spacing */
+.card-body {
+  padding: 12px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card-rating {
+  margin-top: 5px;
+}
+
+
+.sidebar {
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.card-body{
+  font-size: 0.8rem;
+}
+.sidebar {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  max-height: 85vh;
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+
+/* Custom Checkbox */
+.custom-checkbox input[type="checkbox"] {
+  accent-color: #0d6efd;
+  transform: scale(1.2);
+  margin-right: 8px;
+}
+
+/* Star Rating Filter */
+.star-filter {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.star-filter:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile Filter Button */
+.fixed-bottom {
+  z-index: 1050;
+}
+
+.container-fluid {
+  max-width: 95%; /* Expand width but keep some margin */
+}
+
+@media (max-width: 768px) {
+  .container-fluid {
+    max-width: 100%; /* Full width on mobile */
+    padding: 0 10px;
+  }
+}
+
+.banner-img {
+  height: 250px;  /* Adjust height as needed */
+  object-fit: cover;
+
+}
+
+/* Hide sidebar on screens smaller than 480px */
+@media (max-width: 480px) {
+  .sidebar-wrapper {
+    display: none !important; /* Hides sidebar */
+  }
+  
+  /* Optional: If you want a button to toggle the sidebar visibility in mobile view */
+  .sidebar-toggle-btn {
+    display: block;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .banner-img {
+    height: 200px; /* Reduced height for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-img {
+    height: 150px; /* Further reduced height for extra small screens */
+  }
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #f8f9fa !important; /* Change to preferred color */
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Samsung Galaxy S21",
+    "image": "https://images.samsung.com/is/image/samsung/p6pim/ca/sm-g991wzvaxac/gallery/ca-galaxy-s-sm-g991wzvaxac-front-phantom-violet-481769010?$624_624_PNG$",
+    "price": "$ 799.99",
+    "free": true,
+    "rating": 4.5
+  },
+  {
+    "id": 2,
+    "name": "iPhone 13",
+    "image": "https://m.media-amazon.com/images/I/71xb2xkN5qL.jpg",
+    "price": 999.99,
+    "free": false,
+    "rating": 4.0
+  },
+  {
+    "id": 3,
+    "name": "OnePlus 9 Pro",
+    "image": "https://oasis.opstatics.com/content/dam/oasis/page/2021/9-series/spec-image/9-pro/Stellar%20Black-gallery..png",
+    "price": 1069.99,
+    "free": false,
+    "rating": 4.1
+  },
+  {
+    "id": 4,
+    "name": "Google Pixel 6",
+    "image": "https://images-cdn.ubuy.co.in/659bc2f83bc731093506c259-google-pixel-6-128gb-gb7n6-factory.jpg",
+    "price": 699.99,
+    "free": true,
+    "rating": 4.3
+  },
+  {
+    "id": 5,
+    "name": "Xiaomi Mi 11",
+    "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1612767059.44259254!400x400!85.png  ",
+    "price": 749.99,
+    "free": false,
+    "rating": 4.2
+  },
+  {
+    "id": 6,
+    "name": "Galaxy Note 20",
+    "image": "https://m.media-amazon.com/images/I/51MmKaMSNkS.jpg",
+    "price": 950.00,
+    "free": false,
+    "rating": 4.4
+  },
+  {
+    "id": 7,
+    "name": "iPhone 12 Pro",
+    "image": "https://cdn.moglix.com/p/IuR6AJhVBnbzg-xxlarge.jpg",
+    "price": 1099.00,
+    "free": false,
+    "rating": 4.6
+  },
+  {
+    "id": 8,
+    "name": "OnePlus 8T",
+    "image": "https://zoneofdeals.com/wp-content/uploads/2024/04/oneplus-8t-5g...jpg",
+    "price": 749.99,
+    "free": true,
+    "rating": 4.7
+  },
+  {
+    "id": 10,
+    "name": "Xiaomi Redmi Note 10",
+    "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1641368247.71749518!400x400!85.png",
+    "price": 199.99,
+    "free": true,
+    "rating": 3.8
+  },
+  {
+    "id": 14,
+    "name": "Samsung Galaxy Z Fold 3",
+    "image": "https://m.media-amazon.com/images/I/71UmO2UOiBL.jpg",
+    "price": 1799.00,
+    "free": false,
+    "rating": 4.0
+  },
+  {
+    "id": 21,
+    "name": "Vivo X60 Pro",
+    "image": "https://mobilegoo.shop/cdn/shop/files/Untitleddesign_16_7d48c7a5-68d8-40b6-882d-e19ef70a9f2c.jpg?v=1735297801",
+    "price": 999.00,
+    "free": true,
+    "rating": 4.5
+  },
+  {
+    "id": 22,
+    "name": "Realme 8 Pro",
+    "image": "https://images-cdn.ubuy.co.in/66209df773ff637f6656bd29-smartphone-realme-8-pro-6-4-octa-core-8.jpg",
+    "price": 329.99,
+    "free": false,
+    "rating": 4.2
+  }
+]
