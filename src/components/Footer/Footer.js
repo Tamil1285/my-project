@@ -1,8 +1,10 @@
-import React from 'react';
+import React from "react";
+import { BsFacebook, BsTwitter, BsInstagram, BsLinkedin } from "react-icons/bs"; // Import Bootstrap Icons
+import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-light py-4 mt-5">
+    <footer className="footer py-4 mt-5">
       <div className="container">
         <div className="row">
           {/* Company Info */}
@@ -18,35 +20,35 @@ const Footer = () => {
           <div className="col-md-4">
             <h5>Customer Service</h5>
             <ul className="list-unstyled">
-              <li><a href="#" className="text-light">Contact Us</a></li>
-              <li><a href="#" className="text-light">Return Policy</a></li>
-              <li><a href="#" className="text-light">Shipping Information</a></li>
-              <li><a href="#" className="text-light">FAQ</a></li>
+              <li><a href="#" className="text">Contact Us</a></li>
+              <li><a href="#" className="text">Return Policy</a></li>
+              <li><a href="#" className="text">Shipping Information</a></li>
+              <li><a href="#" className="text">FAQ</a></li>
             </ul>
           </div>
 
           {/* Social Media Links */}
           <div className="col-md-4">
             <h5>Follow Us</h5>
-            <ul className="list-unstyled d-flex">
+            <ul className="list-unstyled">
               <li className="me-3">
-                <a href="#" className="text-light" target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-facebook-f"></i> Facebook
+                <a href="#" className="text" target="_blank" rel="noopener noreferrer">
+                  <BsFacebook size={18} className="me-1"/> Facebook
                 </a>
               </li>
               <li className="me-3">
-                <a href="#" className="text-light" target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-twitter"></i> Twitter
+                <a href="#" className="text" target="_blank" rel="noopener noreferrer">
+                  <BsTwitter size={18} className="me-1"/> Twitter
                 </a>
               </li>
               <li className="me-3">
-                <a href="#" className="text-light" target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-instagram"></i> Instagram
+                <a href="#" className="text" target="_blank" rel="noopener noreferrer">
+                  <BsInstagram size={18} className="me-1"/> Instagram
                 </a>
               </li>
               <li className="me-3">
-                <a href="#" className="text-light" target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-linkedin-in"></i> LinkedIn
+                <a href="#" className="text" target="_blank" rel="noopener noreferrer">
+                  <BsLinkedin size={18} className="me-1"/> LinkedIn
                 </a>
               </li>
             </ul>

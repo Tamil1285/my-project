@@ -15,19 +15,34 @@
     border-radius: 20px 0 0 20px;
     border: 1px solid #ccc;
     padding: 8px 12px;
+    background-color: #f6faff;
+    
   }
   
   /* Search Button with Slightly Reduced Padding */
   .search-container .input-group .btn {
     border-radius: 0 20px 20px 0;
-    background-color: #6c757d;
-    color: white;
-    border: 1px solid #6c757d;
+    background-color: #f6faff;
+    color: #9AA6B2;
+    border: 1px solid #ccc;
     padding: 8px 16px;  /* Slightly reduced padding */
   }
   
+  .search-box input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .search-box input:focus {
+    box-shadow: 0 0 8px #9AA6B2;
+    border-color: #9AA6B2;
+    outline: none;
+  }
   .search-container .input-group .btn:hover {
-    background-color: #5a6268;
+    background-color: #BCCCDC;
+    color: #f7fafd;
   }
   
   /* Adjust search box size for mobile */
@@ -40,3 +55,50 @@
     }
   }
   
+.offcanvas{
+  background-color: #f6faff;
+}
+  /* General list styling */
+.offcanvas-body ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* Style each list item */
+.offcanvas-body ul li {
+  display: block;
+  width: 100%;
+  padding: 12px 15px;
+  border-bottom: 1px solid #BCCCDC; /* Light separator line */
+  transition: background 0.3s ease-in-out;
+}
+
+/* Remove border from last item */
+.offcanvas-body ul li:last-child {
+  border-bottom: none;
+}
+
+/* Link styling */
+.offcanvas-body ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+/* Hover effect */
+.offcanvas-body ul li:hover {
+  background: #D9EAFD;
+}
+
+/* Icons in list */
+.offcanvas-body ul li a svg {
+  margin-right: 10px;
+  color: #555;
+}
+
+.navbar{
+  background-color: #D9EAFD;
+}
+

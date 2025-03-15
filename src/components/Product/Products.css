@@ -88,6 +88,16 @@
     max-width: 100%; /* Full width on mobile */
     padding: 0 10px;
   }
+  .banner-img {
+    height: 150px; /* Reduced height for small screens */
+  }
+  .card-img-top {
+    height: 150px;
+  }
+  .col-md-4 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
 }
 
 .banner-img {
@@ -101,6 +111,9 @@
   .sidebar-wrapper {
     display: none !important; /* Hides sidebar */
   }
+  .banner-img {
+    height: 150px; /* Further reduced height for extra small screens */
+  }
   
   /* Optional: If you want a button to toggle the sidebar visibility in mobile view */
   .sidebar-toggle-btn {
@@ -113,20 +126,33 @@
     text-align: center;
     width: 100%;
   }
-}
+  .col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 
+  .card {
+    height: auto; /* Let the content define the height */
+  }
 
-@media (max-width: 768px) {
-  .banner-img {
-    height: 200px; /* Reduced height for small screens */
+  .card-img-top {
+    height: 120px; /* Reduce image height */
+    object-fit: contain; /* Ensures the full image is visible */
+  }
+
+  .card-body {
+    padding: 8px; /* Reduce padding for better spacing */
+  }
+
+  .card-title {
+    font-size: 0.85rem; /* Reduce title size */
+  }
+
+  .text {
+    font-size: 0.8rem; /* Reduce text size */
   }
 }
 
-@media (max-width: 480px) {
-  .banner-img {
-    height: 150px; /* Further reduced height for extra small screens */
-  }
-}
 
 .carousel-indicators [data-bs-target] {
   background-color: #f8f9fa !important; /* Change to preferred color */
@@ -138,4 +164,11 @@
 
 .carousel-indicators .active {
   opacity: 1;
+}
+/* Sidebar sticky positioning */
+.sidebar {
+  position: sticky;
+  top: 80px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
 }

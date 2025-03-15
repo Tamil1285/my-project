@@ -21,6 +21,7 @@ const productsData = [
       Storage: "128GB / 256GB",
       Camera: "Triple 12MP + 64MP + 12MP (Rear), 10MP (Front)",
       Battery: "4000mAh with 25W fast charging",
+      
       OS: "Android 11, One UI 3.1"
     }
   },
@@ -181,8 +182,8 @@ const productsData = [
     rating: 4.4,
     description: "The Realme GT 5G brings you top-tier performance with its Snapdragon 870 chipset, 120Hz AMOLED display, and 64MP triple-camera system. With 65W fast charging, the 4500mAh battery charges quickly and efficiently, giving you more time to enjoy the features that come with Realme UI 2.0 and Android 11.",
     images: [
-      "https://skyphonez.com.au/wp-content/uploads/2023/07/Realme-GT-5G-Gold-Black.webp",
-      "https://cdn.mos.cms.futurecdn.net/realme-gt-1.jpg"
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxFLZm_9H_u5kN_U7xwfTPnDpHkUhHMj0-VQ&s",
+      "https://onsitego.com/blog/wp-content/uploads/2021/08/Realme-GT-Master-Edition-Specifications.jpg"
     ],
     specifications: {
       Display: "6.43-inch Super AMOLED, 120Hz",

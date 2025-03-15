@@ -1,0 +1,29 @@
+ .category-link {
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.hover-bar {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-bottom: 3px;
+  width: 0%;
+  height: 3px;
+  background-color: #007bff;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.hover-bar.active {
+  width: 100%;
+}
+
+.categories-navbar {
+  position: sticky;
+  top: 56px; /* Adjust based on your main navbar height */
+  z-index: 1020; /* Ensure it appears below the main navbar but above content */
+  background-color: #f6faff;
+  border-bottom: 1px solid #ddd;
+}

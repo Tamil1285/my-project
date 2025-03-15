@@ -1,0 +1,48 @@
+.profile-menu-item {
+  transition: background-color 0.3s ease;
+}
+
+.profile-menu-item:hover {
+  background-color: #b5fdfd !important; /* Light gray on hover */
+  color: blue;
+}
+
+/* Ensure the profile container takes full height */
+.profile-container {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure the row expands dynamically */
+.row-flex {
+  display: flex;
+  flex-grow: 1;
+}
+
+/* Sidebar adjustments */
+.profile-sidebar {
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+}
+
+/* Ensure content section expands properly */
+.content-section {
+  flex-grow: 1;
+}
+
+/* Logout Button Styling */
+.logout-button {
+  background-color: #ffffff; /* Bootstrap danger color */
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 0; /* Removes border radius */
+  padding: 10px 15px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.logout-button:hover {
+  background-color: #ff394c; /* Darker red on hover */
+  color: rgb(12, 12, 12);
+}

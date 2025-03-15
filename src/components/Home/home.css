@@ -1,0 +1,94 @@
+.banner-fullscreen {
+    width: 100%;
+    height: 280px; /* Set to your preferred height */
+    object-fit: cover; /* Ensures images fit properly without stretching */
+  }
+
+/* Reduce banner size on small screens */
+@media (max-width: 768px) {
+  .banner-fullscreen {
+    height: 150px; /* Smaller height for mobile */
+  }
+}
+
+.scroll-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.scroll-content {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  padding: 10px;
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.scroll-content::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome, Safari */
+}
+
+.suggested-card {
+  flex: 0 0 auto;
+  width: 200px; /* Adjust based on your design */
+}
+
+.suggested-card .card {
+  border: none !important; /* Remove border */
+  border-radius: 0 !important; /* Remove rounded corners */
+  box-shadow: none !important; /* Remove shadow if any */
+}
+
+.card-img-top {
+  width: 120px; /* Adjust as needed */
+  height: 120px; /* Adjust as needed */
+  object-fit: cover; /* Ensures the image maintains aspect ratio without distortion */
+  margin: auto; /* Centers the image */
+  display: block;
+}
+.card-text{
+  font-size: 12px;
+  font-weight: bold;
+}
+.scroll-btn {
+  background: transparent;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.scroll-btn.left {
+  left: 0;
+}
+
+.scroll-btn.right {
+  right: 0;
+}
+
+
+@media (max-width: 768px) {
+  .scroll-btn {
+    display: none !important;
+  }
+  .suggested-card {
+    flex: 0 0 calc(100% / 3); /* 3 cards per row */
+  }
+}
+
+@media (max-width: 481px) {
+  .scroll-btn {
+    display: none !important;
+  }
+  .suggested-card {
+    flex: 0 0 calc(100% / 2); /* 2 cards per row */
+  }
+}

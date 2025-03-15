@@ -1,0 +1,33 @@
+.ManageAddresses .form-control,
+.ManageAddresses .form-select {
+        font-size: 14px;
+        padding: 6px 10px;
+        border-radius: 0px !important; 
+        box-shadow: none !important;
+        border: 1px solid #9b9b9b !important;
+        background-color: #f6faff !important;
+    }
+
+.small-toggle {
+    font-size: 14px;  /* Reduce size of the toggle (⋮) */
+    padding: 2px 6px;
+    cursor: pointer;
+}
+
+.small-dropdown {
+    font-size: 12px;  /* Reduce dropdown item text size */
+    min-width: 70px; /* Adjust width */
+    padding: 0px;
+    border-radius: 2px;
+}
+#dropdown-custom::after {
+    display: none !important; /* Hide dropdown arrow */
+}
+
+.small-toggle {
+    font-size: 16px;  /* Adjust dot size */
+    padding: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+

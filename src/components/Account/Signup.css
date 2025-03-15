@@ -1,0 +1,73 @@
+    /* Signup.css */
+
+    /* Center the signup container */
+    .signup-container {
+        height: 75vh;
+    }
+
+    /* Form box styling */
+    .signup-box {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+    }
+
+    /* Input fields styling */
+    .form-control {
+        border-radius: 8px;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #bce0fd;
+        background-color: #f1f9ff;
+    }
+
+    .form-label {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    /* Button Styling */
+    .btn-signup {
+        height: 40px;
+        width: 100%;
+        background-color: #258de6;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: none;
+        display: block;
+        margin: 0 auto;
+        font-weight: bold;
+        margin-top: 1.5rem;
+        border-radius: 8px;
+    }
+
+    /* Image Styling */
+    .signup-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px 0 0 10px;
+    }
+
+    /* Adjust layout for small screens */
+@media (max-width: 767px) {
+    .signup-container {
+        padding: 10px;
+    }
+
+    .signup-row {
+        width: 100% !important;
+        margin: 0;
+        flex-direction: column; /* Stack elements on top of each other */
+    }
+
+    .signup-box {
+        width: 100%;
+    }
+
+    .signup-form-container {
+        width: 100%;
+        padding: 0px;
+    }
+}

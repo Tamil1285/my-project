@@ -1,0 +1,19 @@
+.profile-input {
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 0px !important; 
+    box-shadow: none !important;
+    border: 1px solid #9b9b9b !important;
+    background-color: #f6faff !important;
+    width: 40%;
+}
+
+.form-check-input {
+    transform: scale(0.9); /* Reduce radio button size */
+}
+
+button.btn-sm {
+    font-size: 14px; /* Reduce button font size */
+    padding: 5px 10px;
+}
+

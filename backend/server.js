@@ -1,7 +1,8 @@
 const express = require("express");
 const cors = require("cors");
-const mobilesData = require("../backend/src/data/products"); // Importing products data
-const bannerData = require("../backend/src/data/productBanner"); // Importing banner data
+const mobilesData = require("./src/data/mobiles"); // Importing products data
+const bannerData = require("./src/data/productBanner"); // Importing banner data
+const laptopsData = require("./src/data/laptops")
 
 const app = express();
 const PORT = 5000;
@@ -16,6 +17,10 @@ app.get("/api/mobiles", (req, res) => {
 });
 app.get("/api/banner", (req, res) => {
   res.json(bannerData);
+});
+
+app.get("/api/laptop", (req, res) => {
+  res.json(laptopsData);
 });
 
 

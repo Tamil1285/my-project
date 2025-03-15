@@ -1,27 +1,31 @@
 import React, { useState, useEffect, useContext, useRef } from "react";
 import { useParams,  useNavigate } from "react-router-dom";
-// import itemData from "./itemData.json";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaStar, FaRegStar, FaStarHalfAlt } from 'react-icons/fa';
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
-import ProductSlider from "./ProductCarousel";
+import ProductSlider from "./ProductSlider";
 import { CartContext, WishListContext } from "../../App";
 import { useSwipeable } from "react-swipeable"; // Import the swipeable library
+import CategoriesNavbar from "../NavBar/CatNav";
 
 const ItemDetails = ({ cartItems, setCartItems, wishItems, setWishItems }) => {
-  const { id } = useParams();
+  const { category, id } = useParams();  // Extract category and ID from URL
   const productId = parseInt(id, 10);
-   const navigate = useNavigate();
-   
-    // Fetch data from backend
+     
+  const navigate = useNavigate();
+  console.log(category)
+  
+  // Fetch data dynamically based on category
   const [itemData, setItemData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/api/mobiles")
+    fetch(`http://localhost:5000/api/${category}`)  // Dynamically fetch category
       .then((response) => response.json())
-      .then((data) => setItemData(data))  // Set the fetched data to state
+      .then((data) => setItemData(data))  
       .catch((error) => console.error("Error fetching products:", error));
-  }, []);
+  }, [category]);  // Re-fetch when category changes
+  
   const product = itemData.find((item) => item.id === productId);
+  
 
   const [selectedImage, setSelectedImage] = useState("");
   const [isMobile, setIsMobile] = useState(false); // State for mobile detection
@@ -82,11 +86,6 @@ const ItemDetails = ({ cartItems, setCartItems, wishItems, setWishItems }) => {
       setCartItems((prev) => [...prev, product]);
     }
   };
-
-  const removeFromCart = () => {
-    setCartItems((prev) => prev.filter((item) => item.id !== product.id));
-  };
-
   const handleBuyNow = () => {
     navigate(`/buy`, { state: { product: product } });  // Pass the product data
   };
@@ -176,9 +175,9 @@ const ItemDetails = ({ cartItems, setCartItems, wishItems, setWishItems }) => {
 
           {/* Cart Buttons */}
           {cartItems.some((item) => item.id === product.id) ? (
-            <button className="btn btn-danger btn-lg mb-3" onClick={removeFromCart}>
-              Remove from Cart
-            </button>
+           <button className="btn btn-success btn-lg mb-3" onClick={() => navigate('/cart')}>
+           Go to Cart
+           </button>
           ) : (
             <button className="btn btn-primary btn-lg mb-3" onClick={addToCart}>
               Add to Cart
@@ -246,6 +245,7 @@ function ItemDetailsPage() {
 
   return (
     <div className="App">
+      <CategoriesNavbar />
       <ItemDetails
         cartItems={cartItems}
         setCartItems={setCartItems}

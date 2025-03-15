@@ -2,7 +2,9 @@ import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import { BsGeoAlt, BsPersonCircle, BsCart3, BsSearch, BsList, BsArrowLeft } from "react-icons/bs";
+import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js";
+import img from "../../image/google-wallet.png";
+import { BsGeoAlt, BsPersonCircle, BsCart3, BsSearch, BsList, BsArrowLeft, BsInfoCircle, BsTelephone, BsHouse } from "react-icons/bs";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { CartContext, WishListContext } from "../../App";
 import "./NavBar.css";
@@ -28,15 +30,22 @@ const Navbar = () => {
     return () => document.removeEventListener("click", handleClickOutside);
   }, [showSearchBar]);
 
+  // Function to close sidebar when a link is clicked
+  const closeSidebar = () => {
+    const sidebar = document.getElementById("mobileSidebar");
+    const offcanvasInstance = bootstrap.Offcanvas.getInstance(sidebar);
+    if (offcanvasInstance) offcanvasInstance.hide();
+  };
+
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <nav className="navbar navbar-expand-lg navbar-light shadow-sm sticky-top">
         <div className="container d-flex align-items-center justify-content-between flex-nowrap">
-          {/* Left Side: Logo & Brand */}
+          {/* Left Side: Brand & Sidebar Toggle Button */}
           {!showSearchBar && (
             <div className="d-flex align-items-center">
               <button
-                className="navbar-toggler d-block d-sm-none me-2"
+                className="navbar-toggler d-block d-lg-none me-2"
                 type="button"
                 data-bs-toggle="offcanvas"
                 data-bs-target="#mobileSidebar"
@@ -47,11 +56,7 @@ const Navbar = () => {
               </button>
 
               <Link className="navbar-brand d-flex align-items-center" to="/">
-                <img
-                  src="https://png.pngtree.com/png-clipart/20210310/original/pngtree-financial-institution-logo-png-image_5922926.jpg"
-                  alt="Logo"
-                  style={{ width: "40px", marginRight: "5px" }}
-                />
+                <img src={img} alt="Logo" style={{ width: "40px", marginRight: "5px" }} />
                 <span className="text-dark fw-bold">BrandName</span>
               </Link>
             </div>
@@ -61,49 +66,34 @@ const Navbar = () => {
           <div className={`search-container flex-grow-1 ${showSearchBar ? "d-flex" : "d-none d-sm-flex"} mx-2`}>
             <form className="d-flex w-100 align-items-center">
               {showSearchBar && (
-                <button
-                  className="btn btn-light d-block d-sm-none me-2"
-                  type="button"
-                  onClick={() => setShowSearchBar(false)}
-                >
+                <button className="btn btn-light d-block d-sm-none me-2" type="button" onClick={() => setShowSearchBar(false)}>
                   <BsArrowLeft size={18} />
                 </button>
               )}
               <div className="input-group search-box">
-                <input className="form-control form-control-sm" type="search" placeholder="Search..." autoFocus />
-                <button className="btn btn-secondary btn-sm" type="submit"><BsSearch /></button>
+                <input className="form-control form-control-sm" type="search" placeholder="Search..." />
+                <button className="btn btn-sm" type="submit"><BsSearch /></button>
               </div>
             </form>
           </div>
 
-          {/* Right Side: Icons */}
+          {/* Right Side Icons */} 
           {!showSearchBar && (
-            <div className="d-flex d-sm-none align-items-center gap-3">
-              <button className="nav-link bg-transparent border-0 search-toggle" onClick={() => setShowSearchBar(true)}>
+            <div className="d-flex align-items-center pe-3">
+              {/* Search Icon - Only visible on screens < 576px */}
+              <button className="nav-link bg-transparent border-0 search-toggle d-block d-sm-none" onClick={() => setShowSearchBar(true)}>
                 <BsSearch size={20} className="text-dark" />
               </button>
-
-              <Link to="/cart" className="nav-link position-relative">
-                <BsCart3 size={20} className="text-dark" />
-                {cartItems.length > 0 && (
-                  <span
-                    className="badge bg-danger rounded-pill position-absolute"
-                    style={{ top: "-5px", left: "12px", fontSize: "0.6rem" }}
-                  >
-                    {cartItems.length}
-                  </span>
-                )}
-              </Link>
             </div>
           )}
 
-          {/* Desktop Icons */}
-          <ul className="navbar-nav d-none d-sm-flex flex-row align-items-center gap-3">
+          {/* Desktop Icons - Hidden on Small Screens */}
+          <ul className="navbar-nav d-none d-lg-flex flex-row align-items-center gap-3">
             <li className="nav-item">
-              <a className="nav-link d-flex align-items-center" href="#">
+              <Link className="nav-link d-flex align-items-center" to="/location">
                 <BsGeoAlt size={18} />
                 <span className="d-none d-md-inline ms-1">Location</span>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <Link to="/Wishlist" className="nav-link d-flex align-items-center">
@@ -115,11 +105,11 @@ const Navbar = () => {
               <Link to="/cart" className="nav-link d-flex align-items-center">
                 <BsCart3 size={18} />
                 {cartItems.length > 0 && (
-                  <span className="badge bg-danger rounded-pill position-absolute" style={{ top: "-5px", left: "12px", fontSize: "0.6rem" }}>
+                  <span className="badge bg-danger rounded-pill position-absolute" style={{ top: "-7px", left: "18px", fontSize: "0.6rem" ,width:"10px" ,display:"flex",justifyContent:"center",alignItems:"center"}}>
                     {cartItems.length}
                   </span>
                 )}
-                <span className="d-none d-md-inline ms-1">Cart</span>
+                <span className="d-none d-md-inline ms-1">Cart</span> 
               </Link>
             </li>
             <li className="nav-item">
@@ -131,6 +121,33 @@ const Navbar = () => {
           </ul>
         </div>
       </nav>
+
+      {/* Mobile Sidebar */}
+      <div className="offcanvas offcanvas-start" id="mobileSidebar" tabIndex="-1" aria-labelledby="mobileSidebarLabel">
+        <div className="offcanvas-header">
+          <h5 className="offcanvas-title" id="mobileSidebarLabel">Menu</h5>
+          <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div className="offcanvas-body">
+          <ul className="list-unstyled w-100">
+            {[
+              { to: "/", icon: <BsHouse />, label: "Home" },
+              { to: "/Wishlist", icon: <AiOutlineHeart />, label: "Wishlist" },
+              { to: "/cart", icon: <BsCart3 />, label: "Cart" },
+              { to: "/Login", icon: <BsPersonCircle />, label: "Profile" },
+              { to: "#", icon: <BsGeoAlt />, label: "Location" },
+              { to: "#", icon: <BsInfoCircle />, label: "About Us" },
+              { to: "#", icon: <BsTelephone />, label: "Contact" }
+            ].map(({ to, icon, label }, index) => (
+              <li key={index}>
+                <Link to={to} className="nav-link" onClick={closeSidebar}>
+                  {icon} {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </>
   );
 };

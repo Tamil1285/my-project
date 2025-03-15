@@ -1,0 +1,39 @@
+/* MyOrders.css */
+
+h4 {
+    font-weight: bold;
+    color: #333;
+}
+
+.table {
+    margin-top: 10px;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.badge {
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 12px;
+}
+
+.badge-success {
+    background-color: #28a745 !important;
+}
+
+.badge-info {
+    background-color: #17a2b8 !important;
+}
+
+.badge-warning {
+    background-color: #ffc107 !important;
+    color: #333;
+}

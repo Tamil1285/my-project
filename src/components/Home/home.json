@@ -1,0 +1,51 @@
+{
+    "categories": [
+      { "name": "Electronics",
+        "category":"Mobiles", 
+        "image": "https://m.media-amazon.com/images/I/510uTHyDqGL.jpg",
+        "subcategories": ["HP", "Dell", "Asus", "Lenovo"]
+      },
+      { "name": "Mobiles",
+        "category":"Mobiles", 
+        "image": "https://vasanthandco.in/images/productimages/1903__product__Mobiles__apple-mobile-iphone-13-blue-128gb-3.png",
+        "subcategories": ["Samsung", "Vivo", "Redmi", "Realme"] 
+      },
+      { "name": "Fashion",
+        "category":"Mobiles", 
+        "image": "https://static.vecteezy.com/system/resources/thumbnails/048/094/812/small_2x/fashionable-couple-posing-confidently-in-stylish-attire-png.png",
+        "subcategories": ["HP", "Dell", "Asus", "Lenovo"]
+      },
+      { "name": "Home",
+        "category":"Mobiles", 
+        "image": "https://static.vecteezy.com/system/resources/thumbnails/024/396/069/small_2x/comfortable-armchair-isolated-on-white-background-interior-element-generate-ai-free-photo.jpg",
+        "subcategories": ["Refrigerators", "Washing Machines", "Microwaves", "Air Conditioners"] 
+        },
+      { "name": "Books",
+        "category":"Mobiles", 
+        "image": "https://cbx-prod.b-cdn.net/COLOURBOX7408850.jpg?width=800&height=800&quality=70",
+        "subcategories": ["HP", "Dell", "Asus", "Lenovo"] 
+      },
+      { "name": "Toys",
+        "category":"Mobiles", 
+        "image": "https://media.istockphoto.com/id/873187696/photo/wooden-pyramid-childrens-toy-made-of-colorful-rings-on-a-white-background-3d-rendering.jpg?s=612x612&w=0&k=20&c=_dA9awPRAndVJtMKAkoRSL67jSu4e_-GCeXqJhxjPwk=",
+        "subcategories": ["HP", "Dell", "Asus", "Lenovo"] 
+      }
+    ],
+    "banners": [
+                "https://img.freepik.com/free-psd/supermarket-template-design_23-2151809085.jpg",
+                "https://img.freepik.com/free-psd/supermarket-template-design_23-2151823208.jpg",
+                "https://www.sobeys.com/wp-content/uploads/2019/07/Store-banner.jpg",
+                "https://t4.ftcdn.net/jpg/03/06/69/49/360_F_306694930_S3Z8H9Qk1MN79ZUe7bEWqTFuonRZdemw.jpg"
+    ], 
+    "suggestedProducts": [
+      { "id": 1, "name": "Bicycle", "image": "https://justbuycycles.com/cdn/shop/products/T05507_1.png?v=1673182232" },
+      { "id": 2, "name": "Bicycle Helmat", "image": "https://s.alicdn.com/@sc04/kf/H1ce6f8fb8fd94cbbb8799e14d13095caM.jpg_720x720q50.jpg" },
+      { "id": 3, "name": "Water bottle", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXuAXgjAOIUyTHysfqTWXi_01Q2RsyozK8fzo5XrUVuX1bq_sd4oILn-qw3pONSe1We-Q&usqp=CAU" },
+      { "id": 4, "name": "Glove", "image": "https://www.shutterstock.com/image-photo/halffinger-padded-cycling-gl oves-image-600nw-2501042533.jpg" },
+      { "id": 5, "name": "Light", "image": "https://i.pinimg.com/736x/68/51/3b/68513b750a6aeac3dde1943de1b1d971.jpg" },
+      { "id": 6, "name": "Bike Reflector", "image": "https://media.istockphoto.com/id/671783644/photo/bicycle-light-reflectors.jpg?s=612x612&w=0&k=20&c=gdqFiM_UT1-Ark64BOw9lX_Zv-uYpLAVYPUTHz0gpSo=" },
+      { "id": 7, "name": "Bicycle Lock", "image": "https://www.shutterstock.com/image-photo/bike-lock-close-isolated-on-600nw-1985568569.jpg" },
+      { "id": 8, "name": "Bicycle Pump", "image": "https://thumbs.dreamstime.com/b/bike-pump-isolated-png-file-attached-bicycle-white-background-also-clear-background-85917574.jpg" }
+    ]
+  }
+  

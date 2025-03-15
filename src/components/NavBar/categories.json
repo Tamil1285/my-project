@@ -1,0 +1,12 @@
+[
+    { "name": "Men", "items": ["Shirts", "Jeans", "Shoes"] },
+    { "name": "Women", "items": ["Dresses", "Tops", "Heels"] },
+    { "name": "Kids", "items": ["T-Shirts", "Shorts", "Sandals"] },
+    { "name": "Electronics", "items": ["Mobiles", "Laptop", "Tv", "Gaming", "Home Theatres"] },
+    { "name": "Beauty", "items": ["Skincare", "Makeup", "Haircare"] },
+    { "name": "Watches", "items": ["Analog", "Digital", "Smart"] },
+    { "name": "Gifts", "items": ["Gift Cards", "Personalized", "Toys"] },
+    { "name": "Brands", "items": ["Nike", "Adidas", "Puma"] },
+    { "name": "Homestop", "items": ["Furniture", "Decor", "Kitchen"] }
+  ]
+  

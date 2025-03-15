@@ -32,14 +32,9 @@ const CartPage = () => {
 
   const handleBuyNow = () => {
     if (cartItems.length === 0) return;
-  
-    if (cartItems.length === 1) {
-      navigate("/buy", { state: { product: cartItems[0] } }); // Single item
-    } 
-    else {
-      navigate("/buy", { state: { product: cartItems } }); // Multiple items
-    }
+    navigate("/buy", { state: { product: cartItems.length === 1 ? cartItems[0] : cartItems } });
   };
+
   return (
     <Container className="mt-4 mb-5">
       {isCartEmpty ? (
@@ -55,21 +50,25 @@ const CartPage = () => {
         </Row>
       ) : (
         <Row>
+          {/* Cart Items Section */}
           <Col md={8}>
             {cartItems.map((item) => (
               <div key={item.id} className="border mb-4 p-3 rounded">
                 <Row className="align-items-center">
-                  <Col md={2}>
+                  {/* Product Image */}
+                  <Col xs={4} sm={3} className="text-center">
                     <img
                       src={item.images?.[0] || "https://via.placeholder.com/150"}
                       alt={item.name}
-                      className="img-fluid rounded-start"
+                      className="img-fluid rounded w-100"
+                      style={{ maxWidth: "120px" }} // Increased size
                     />
                   </Col>
-                  <Col md={10}>
+                  {/* Product Details */}
+                  <Col xs={8} sm={9}>
                     <h6>{item.name}</h6>
-                    <p>RAM | {item.specifications?.RAM || "N/A"}</p>
-                    <p>Storage | {item.specifications?.Storage || "N/A"}</p>
+                    <p className="mb-1">RAM | {item.specifications?.RAM || "N/A"}</p>
+                    <p className="mb-1">Storage | {item.specifications?.Storage || "N/A"}</p>
 
                     <div className="d-flex align-items-center mb-2">
                       <strong>
@@ -83,8 +82,9 @@ const CartPage = () => {
                       </strong>
                     </div>
 
+                    {/* Quantity and Remove Buttons */}
                     <Row>
-                      <Col xs={6}>
+                      <Col xs={6} className="d-flex align-items-center">
                         <Button
                           variant="outline-secondary"
                           size="sm"
@@ -101,7 +101,7 @@ const CartPage = () => {
                           +
                         </Button>
                       </Col>
-                      <Col xs={6}>
+                      <Col xs={6} className="text-end">
                         <Button variant="outline-danger" size="sm" onClick={() => handleRemove(item.id)}>
                           Remove
                         </Button>
@@ -113,13 +113,14 @@ const CartPage = () => {
             ))}
           </Col>
 
+          {/* Price Summary Section */}
           <Col md={4}>
             <div className="border p-3">
               <h5>Price Details</h5>
               <Table borderless>
                 <tbody>
                   <tr>
-                    <td>Price ({cartItems.length} item)</td>
+                    <td>Price ({cartItems.length} item{cartItems.length > 1 ? "s" : ""})</td>
                     <td className="text-end">
                       ₹{cartItems.reduce((total, item) => total + item.price * item.quantity, 0)}
                     </td>
